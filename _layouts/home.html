@@ -1,0 +1,67 @@
+---
+layout: default
+---
+
+{%- comment -%}
+  Overrides minima's own "home" layout. Renders the intro from index.md,
+  then the auto-generated gallery, then any diary posts.
+
+  The avatar is opt-in: drop a file at assets/img/ginger-avatar.jpg and it
+  appears here. Until then this block is simply skipped.
+{%- endcomment -%}
+
+{%- assign avatar = site.static_files
+      | where_exp: "f", "f.path contains '/assets/img/ginger-avatar'"
+      | first -%}
+
+<div class="hero">
+  {%- if avatar -%}
+    <img class="hero__avatar"
+         src="{{ avatar.path | relative_url }}"
+         alt="Ginger, a ginger cat, looking directly at you."
+         width="140" height="140">
+  {%- endif -%}
+  <div class="hero__words">
+    <h1 class="hero__title">{{ page.title | default: site.title | escape }}</h1>
+    {%- if site.tagline -%}
+      <p class="hero__tagline">{{ site.tagline | escape }}</p>
+    {%- endif -%}
+  </div>
+</div>
+
+<div class="intro">
+  {{ content }}
+</div>
+
+<section class="section" id="gallery" aria-labelledby="gallery-heading">
+  <h2 class="section__title" id="gallery-heading">The Photo Album</h2>
+  <p class="section__lede">
+    Evidence of a life well napped. Tap any picture to make it bigger, which
+    is what I would want.
+  </p>
+  {%- include gallery.html -%}
+</section>
+
+{%- if site.posts.size > 0 -%}
+<section class="section" id="diary" aria-labelledby="diary-heading">
+  <h2 class="section__title" id="diary-heading">From the Diary</h2>
+  <ul class="post-list">
+    {%- for post in site.posts limit: 5 -%}
+      <li class="post-list__item">
+        <time class="post-list__date" datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date: "%-d %B %Y" }}
+        </time>
+        <a class="post-list__link" href="{{ post.url | relative_url }}">
+          {{ post.title | escape }}
+        </a>
+        {%- if post.excerpt -%}
+          <p class="post-list__excerpt">{{ post.excerpt | strip_html | truncatewords: 28 }}</p>
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+  {%- if site.posts.size > 5 -%}
+    <p><a class="more-link" href="{{ '/blog.html' | relative_url }}">All diary entries →</a></p>
+  {%- endif -%}
+</section>
+{%- endif -%}

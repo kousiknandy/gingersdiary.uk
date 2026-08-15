@@ -1,0 +1,39 @@
+---
+layout: page
+title: The Diary
+permalink: /blog.html
+---
+
+<p class="section__lede">
+  I do not write often. Writing requires sitting upright. But when something
+  genuinely life-changing happens — a move, a vet betrayal, a new box — I will
+  dictate an entry here.
+</p>
+
+{%- if site.posts.size > 0 -%}
+  <ul class="post-list">
+    {%- for post in site.posts -%}
+      <li class="post-list__item">
+        <time class="post-list__date" datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date: "%-d %B %Y" }}
+        </time>
+        <a class="post-list__link" href="{{ post.url | relative_url }}">
+          {{ post.title | escape }}
+        </a>
+        {%- if post.excerpt -%}
+          <p class="post-list__excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+{%- else -%}
+  <div class="empty-state">
+    <p class="empty-state__paw" aria-hidden="true">😴</p>
+    <p><strong>No entries yet.</strong></p>
+    <p>
+      Nothing life-changing has happened recently, which is exactly how I like
+      it. Ginger is currently asleep. Please check back after the next
+      significant event, such as a thunderstorm or a slightly different dinner.
+    </p>
+  </div>
+{%- endif -%}

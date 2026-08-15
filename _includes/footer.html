@@ -1,0 +1,12 @@
+<footer class="site-footer" role="contentinfo">
+  <div class="wrapper site-footer__inner">
+    <p class="site-footer__paws" aria-hidden="true">🐾 🐾 🐾</p>
+    <p class="site-footer__line">
+      {{ site.title | escape }} — dictated by a cat, typed by staff.
+    </p>
+    <p class="site-footer__line site-footer__small">
+      &copy; {{ 'now' | date: "%Y" }} Ginger. All naps reserved.
+      <a href="{{ '/feed.xml' | relative_url }}">Subscribe</a>
+    </p>
+  </div>
+</footer>

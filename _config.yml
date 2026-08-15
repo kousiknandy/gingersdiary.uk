@@ -1,0 +1,46 @@
+# ── Ginger's Diary ────────────────────────────────────────────────
+title: "Ginger's Diary"
+tagline: "Adventures of one ginger cat"
+description: >-
+  The official diary of Ginger: a ginger cat, professional napper, and
+  emotional support animal who was rescued at two weeks old and has since
+  relocated from Bangalore to London with her staff.
+url: "https://gingersdiary.uk"
+baseurl: ""
+lang: en_GB
+
+# Ginger's byline on posts and in the feed
+author:
+  name: Ginger
+  email: ""
+
+theme: minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Nav links, in order. Add a page here and it appears in the header.
+header_pages:
+  - blog.html
+  - about.md
+
+# Posts live at /diary/2026/08/15/title/
+permalink: /diary/:year/:month/:day/:title/
+
+# Newest photo last, so the gallery reads as a journey.
+# Flip to true to show the newest photos first.
+gallery_newest_first: false
+
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - tools
+  - README.md
+  - LICENSE
+  - "*.zip"

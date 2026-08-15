@@ -1,0 +1,69 @@
+{%- comment -%}
+  The photo gallery. Lists every image in assets/img/gallery/ automatically,
+  so adding a photo needs no change to this file — drop it in, push, done.
+
+  site.static_files is core Jekyll, not a plugin, so this works on GitHub Pages.
+  Filenames are ginger-YYYY-MM-DD.jpg, which makes a plain name sort chronological.
+  Captions are optional and come from _data/gallery.yml, keyed by filename.
+{%- endcomment -%}
+
+{%- assign photos = site.static_files
+      | where_exp: "f", "f.path contains '/assets/img/gallery/'"
+      | sort: "name" -%}
+{%- if site.gallery_newest_first -%}
+  {%- assign photos = photos | reverse -%}
+{%- endif -%}
+
+{%- if photos.size > 0 -%}
+<div class="gallery">
+  {%- for photo in photos -%}
+    {%- assign meta = site.data.gallery[photo.basename] -%}
+
+    {%- comment -%} Turn ginger-2021-08-15 into a readable date, if it is date-shaped. {%- endcomment -%}
+    {%- assign stamp = photo.basename | remove_first: "ginger-" -%}
+    {%- assign bits = stamp | split: "-" -%}
+    {%- assign nice_date = "" -%}
+    {%- if bits.size == 3 -%}
+      {%- assign year = bits[0] -%}
+      {%- if year.size == 4 -%}
+        {%- assign nice_date = stamp | date: "%-d %B %Y" -%}
+      {%- endif -%}
+    {%- endif -%}
+
+    {%- if meta.alt -%}
+      {%- assign alt = meta.alt -%}
+    {%- elsif nice_date != "" -%}
+      {%- assign alt = "Ginger the cat, photographed on " | append: nice_date -%}
+    {%- else -%}
+      {%- assign alt = "Ginger the cat" -%}
+    {%- endif -%}
+
+    <figure class="photo">
+      <a class="photo__frame"
+         href="{{ photo.path | relative_url }}"
+         data-lightbox
+         data-caption="{{ meta.caption | default: nice_date | strip_newlines | escape }}"
+         data-date="{{ nice_date }}"
+         aria-label="Enlarge photo{% if nice_date != '' %} from {{ nice_date }}{% endif %}">
+        <img src="{{ photo.path | relative_url }}"
+             alt="{{ alt | escape }}"
+             loading="lazy"
+             decoding="async"
+             style="--focus: {{ meta.focus | default: 'center center' }}">
+      </a>
+      {%- if meta.caption or nice_date != "" -%}
+        <figcaption class="photo__caption">
+          {%- if meta.caption -%}
+            <span class="photo__words">{{ meta.caption | strip_newlines }}</span>
+          {%- endif -%}
+          {%- if nice_date != "" -%}
+            <time class="photo__date" datetime="{{ stamp }}">{{ nice_date }}</time>
+          {%- endif -%}
+        </figcaption>
+      {%- endif -%}
+    </figure>
+  {%- endfor -%}
+</div>
+{%- else -%}
+  <p class="gallery-empty">No photos yet. Ginger is unimpressed.</p>
+{%- endif -%}

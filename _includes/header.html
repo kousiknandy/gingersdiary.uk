@@ -1,0 +1,21 @@
+<header class="site-header" role="banner">
+  <div class="wrapper site-header__inner">
+    <a class="site-title" href="{{ '/' | relative_url }}">
+      <span class="site-title__paw" aria-hidden="true">🐾</span>
+      <span class="site-title__text">{{ site.title | escape }}</span>
+    </a>
+
+    {%- comment -%} Nav order comes from header_pages in _config.yml. {%- endcomment -%}
+    <nav class="site-nav" aria-label="Main">
+      <a class="site-nav__link{% if page.url == '/' %} is-current{% endif %}"
+         href="{{ '/' | relative_url }}">Home</a>
+      {%- for path in site.header_pages -%}
+        {%- assign nav_page = site.pages | where: "path", path | first -%}
+        {%- if nav_page -%}
+          <a class="site-nav__link{% if page.url == nav_page.url %} is-current{% endif %}"
+             href="{{ nav_page.url | relative_url }}">{{ nav_page.title | escape }}</a>
+        {%- endif -%}
+      {%- endfor -%}
+    </nav>
+  </div>
+</header>

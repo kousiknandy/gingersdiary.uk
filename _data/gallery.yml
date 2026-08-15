@@ -1,0 +1,86 @@
+# ── Optional photo captions ───────────────────────────────────────
+#
+# Everything in here is OPTIONAL. The gallery lists whatever JPEGs sit in
+# assets/img/gallery/ whether or not they appear below — a photo with no
+# entry just shows its date, taken from the filename. So you can drop a new
+# photo in, push, and it publishes with zero edits to this file.
+#
+# Add an entry only when you want to say something about a photo:
+#
+#   ginger-2026-08-15:                     # the filename, minus the .jpg
+#     caption: Something funny, in Ginger's voice.
+#     alt: Plain description for screen readers and slow connections.
+#     focus: 70% center                    # which part to keep when the
+#                                          # square tile crops the photo.
+#                                          # Defaults to "center center".
+#                                          # First value = left→right.
+
+ginger-2021-08-15:
+  caption: >-
+    Fully deployed on the cat tree. The belly is out, which means the belly
+    is available for admiring but categorically not for touching.
+  alt: Ginger lying on her side on a carpeted cat tree step, stretched out in the sun with her paws tucked in.
+  focus: 25% center
+
+ginger-2022-10-15:
+  caption: >-
+    Discovered that if I lie exactly here, the sun arrives at 9am and I am
+    already waiting for it. This is called planning.
+  alt: Ginger asleep on a grey floor in a patch of sunlight beside a patterned lamp.
+  focus: 38% center
+
+ginger-2022-12-17:
+  caption: >-
+    The hoomans installed a long hot metal bench along the wall. For me.
+    Finally, some competent staff work.
+  alt: Ginger curled up asleep on a radiator shelf with one paw stretched out over the radiator grille.
+  focus: 40% center
+
+ginger-2023-11-24:
+  caption: >-
+    They think this is their blanket. The blanket and I have discussed it
+    and the blanket disagrees.
+  alt: Ginger asleep on a bed, tucked underneath a soft grey blanket with only her head and front paws showing.
+  focus: 72% center
+
+ginger-2024-07-07:
+  caption: >-
+    Sat on the glowing rectangle because it was warm, and stayed on it
+    because someone urgently needed to stop working.
+  alt: Ginger sitting squarely on an open laptop keyboard, looking directly at the camera.
+  focus: 68% center
+
+ginger-2025-07-20:
+  caption: >-
+    A mesh box with a view. I did not consent to the box, but I will admit
+    the trees were acceptable.
+  alt: Ginger seen from behind inside a mesh pet tent, looking out at grass and trees.
+  focus: center 40%
+
+ginger-2025-10-26:
+  caption: >-
+    Loaf achieved. Structural integrity excellent. Do not attempt to
+    relocate the loaf.
+  alt: Ginger sitting in a compact loaf shape on a green cushion beside a curtain, eyes half closed.
+  focus: 58% center
+
+ginger-2026-04-06:
+  caption: >-
+    Eight years of research have led me to conclude that the best spot in
+    any house is wherever the sun currently is. Paper accepted.
+  alt: Ginger sprawled on her back in a bright patch of sunlight by a doorway, paws in the air and tail curled up.
+  focus: 28% center
+
+ginger-2026-05-10:
+  caption: >-
+    Supervising the small screen. It had cartoon animals on it, which is
+    basically continuing professional development.
+  alt: Ginger curled up on a bed next to a person watching a tablet.
+  focus: 68% center
+
+ginger-2026-06-13:
+  caption: >-
+    Outdoor napping, indoor temperature. Somebody finally read my list of
+    demands.
+  alt: Ginger fast asleep on a garden chair with a striped cushion, with a sunny green garden visible behind the glass.
+  focus: 62% center
