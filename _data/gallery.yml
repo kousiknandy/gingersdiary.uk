@@ -15,12 +15,33 @@
 #                                          # Defaults to "center center".
 #                                          # First value = left→right.
 
+ginger-2019-11-27:
+  caption: >-
+    Full perimeter inspection from the high wall. The basketball court is still
+    unlicensed, but I am prepared to let the clouds continue.
+  alt: Ginger sitting upright on a stone parapet wall above a housing estate, with a green basketball court, trees and heavy grey clouds behind her.
+  focus: 78% center
+
 ginger-2021-08-15:
   caption: >-
     Fully deployed on the cat tree. The belly is out, which means the belly
     is available for admiring but categorically not for touching.
   alt: Ginger lying on her side on a carpeted cat tree step, stretched out in the sun with her paws tucked in.
   focus: 25% center
+
+ginger-2022-04-10:
+  caption: >-
+    Front row, direct sunlight, staff nowhere near me. I have no complaints,
+    which is itself slightly upsetting.
+  alt: Ginger loafing on a folded grey towel on a sunlit windowsill with her eyes closed, houses visible through the glass behind her.
+  focus: 42% center
+
+ginger-2022-10-07:
+  caption: >-
+    Radiator below, window in front, towel on top. Three separate technologies,
+    finally working together, all of them for me.
+  alt: Ginger asleep stretched out full length on a dark pink towel on a windowsill above a radiator, with a street and parked cars outside.
+  focus: 55% center
 
 ginger-2022-10-15:
   caption: >-
@@ -43,12 +64,47 @@ ginger-2023-11-24:
   alt: Ginger asleep on a bed, tucked underneath a soft grey blanket with only her head and front paws showing.
   focus: 72% center
 
+ginger-2024-06-15:
+  caption: >-
+    Appointed myself head of navigation. The little mirror shows nothing useful,
+    so I have taken up position in the actual windscreen.
+  alt: Ginger standing on a car dashboard in front of the windscreen, with a rainy street, trees and houses outside.
+  focus: 62% center
+
 ginger-2024-07-07:
   caption: >-
     Sat on the glowing rectangle because it was warm, and stayed on it
     because someone urgently needed to stop working.
   alt: Ginger sitting squarely on an open laptop keyboard, looking directly at the camera.
   focus: 68% center
+
+ginger-2024-09-29:
+  caption: >-
+    Carried into the woods inside a see-through bubble. Superb documentary
+    footage, and absolutely no danger of touching a squirrel.
+  alt: Ginger inside a transparent bubble pet backpack resting on a mossy fallen log in a green wood.
+  focus: 25% center
+
+ginger-2024-10-06:
+  caption: >-
+    It is 19:32 and the laptop is now closed for the evening. I closed it.
+    Using myself.
+  alt: Ginger curled up asleep on the keyboard of an open laptop balanced on a person's lap on a sofa.
+  focus: 48% center
+
+ginger-2025-01-03:
+  caption: >-
+    New year, new fort. I am inside the fort. You may address me through the
+    small gap.
+  alt: Ginger peeking out from inside a fluffy grey blanket nest on the top platform of a tall cat tree.
+  focus: 48% center
+
+ginger-2025-06-24:
+  caption: >-
+    They sawed the keyboard in half and left a gap precisely my size. I decline
+    to believe that was an accident.
+  alt: Ginger sitting on a desk between the two halves of a split keyboard, with a notepad, a pen and a monitor showing code behind her.
+  focus: 42% center
 
 ginger-2025-07-20:
   caption: >-
